@@ -11,4 +11,6 @@ In the second step, I deploy the inference part based on mobilenet backbone on e
 have real-time performance. 
 
 
-
+<p align="center">
+  <img  src="images/adas_pedestrian.jpg" alt="alt text" width="50%" height="50%" title="Pedestrain detection">
+</p>
