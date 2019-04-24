@@ -23,11 +23,14 @@ have real-time performance.
 
 
 
+
 ## Inference
 
 
 
-# Deployment on DragonBoard 410C
+
+
+## Deployment on DragonBoard 410C
 
 
 
