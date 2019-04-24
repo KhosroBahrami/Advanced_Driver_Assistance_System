@@ -1,7 +1,6 @@
-# Advanced Driver Assistance System (ADAS) using SSD (Single Shot MultiBox Object Detector) based on Tensorflow
+# Advanced Driver Assistance System (ADAS) 
 
-Goal of this project is a deployment of Advanced Driver Assistance System (ADAS) with road sign detection, red light detection 
-and pedestrian detection sub systems. 
+The goal of this project is a deployment of road sign detection, red light detection and pedestrian detection sub systems of Advanced Driver Assistance System (ADAS) with SSD object detection. 
 The final product is an embedded system equipped with camera that in real-time gives alarm in the case of facing red light, 
 stop sign and pedestrian. 
 This project has two main steps: 
