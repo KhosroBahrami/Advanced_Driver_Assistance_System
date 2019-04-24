@@ -13,3 +13,24 @@ have real-time performance.
 <p align="center">
   <img  src="images/adas_pedestrian.jpg" alt="alt text" width="50%" height="50%" title="Pedestrain detection">
 </p>
+
+
+## Introduction
+
+
+
+## Training
+
+
+
+## Inference
+
+
+
+# Deployment on DragonBoard 410C
+
+
+
+
+
+
