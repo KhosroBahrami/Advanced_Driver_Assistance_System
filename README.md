@@ -1,8 +1,8 @@
 # Advanced Driver Assistance System (ADAS) 
 
-The goal of this project is deployment of car, road sign, red light and pedestrian detection sub-systems of Advanced Driver Assistance System (ADAS). 
-The final product is an embedded system equipped with camera that detect car, red light, stop sign and pedestrian in realtime. 
-For Objecte detection Iused SSD objecte detection methods followed by optimization and fine tunning for detection of new objects.
+The goal of this project is deployment of vehicle, road sign, red light and pedestrian detection sub-systems of Advanced Driver Assistance System (ADAS). 
+The final product is an embedded system equipped with camera that detect vehicle, red light, stop sign and pedestrian in real-time. 
+For object detection, I used SSD object detection method followed by optimization and fine tunning for detection of new objects.
 
 This project has two main steps: 
 In the first step, I fine tunned the SSD object detection based on mobilenet backbone network for new 
@@ -15,11 +15,22 @@ In the second step, I deploy the inference part based on mobilenet backbone on e
 </p>
 
 
-## Introduction
-
 
 
 ## Training
+
+In order to specialize the SSD network for vehicle, road sign, red light and pedestrian detection, I fine-tuned the original network weights using the fowwling databases.
+
+KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detector already contains vehicles and pedestrians. However, I fine-tuned the SSD for vehicale and pedestrian detection. For KITTI, I divided the original training set of 7500 images into 6000 training and 1500 validation samples.
+
+Bosch Small Traffic Lights Dataset: For traffic light detection, I used 5000 training sample and 2000 validation samples from bosch dataset.  
+
+
+
+For fine tunning, I used the following parameters:
+batch size = 32 
+learning rate = 0.001
+
 
 
 
