@@ -24,6 +24,47 @@ In order to specialize the SSD network for vehicle and pedestrian detection, I f
 
 KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detector already contains vehicles and pedestrians. However, I fine-tuned the SSD for vehicale and pedestrian detection. For KITTI, I divided the original training set of 7500 images into 6000 training and 1500 validation samples.
 
+## Backbone Network
+I used MobilenetV1 as the backbone network. 
+
+
+| Layer             | Type/Stride  | Filter Size        | Feature map    |# of Parameters | # of Bounding boxes | 
+| :---:             | :---:        |  :---:             |  :---:          | :---:          | :---:            | 
+| Conv_1            | Conv / s2    |  3 * 3 * 3 * 32    | 150 * 150 * 32  |  -             |  -               |
+| Conv_2_depthwise  | Conv dw / s1 |  3 * 3 * 32 dw     | 150 * 150 * 64  |  -             |  -               |
+| Conv_2_pointwise  | Conv / s1    |  1 * 1 * 32 * 64   | 150 * 150 * 64  |  -             |  -               |
+| Conv_3_depthwise  | Conv dw / s2 |  3 * 3 * 64 dw     | 75 * 75 * 128   |  -             |  -               |
+| Conv_3_pointwise  | Conv / s1    |  1 * 1 * 64 * 128  | 75 * 75 * 128   |  -             |  -               |
+| Conv_4_depthwise  | Conv dw / s1 |  3 * 3 * 128 dw    | 75 * 75 * 128   |  -             |  -               |
+| Conv_4_pointwise  | Conv / s1    |  1 * 1 * 128 * 128 | 75 * 75 * 128   |  -             |  -               |
+| Conv_5_depthwise  | Conv dw / s2 |  3 * 3 * 128 dw    | 38 * 38 * 128   |  -             |  -               |
+| Conv_5_pointwise  | Conv / s1    |  1 * 1 * 128 * 256 | 38 * 38 * 256   |  -             |  -               |
+| Conv_6_depthwise  | Conv dw / s1 |  3 * 3 * 256 dw    | 38 * 38 * 256   |  -             |  -               |
+| Conv_6_pointwise  | Conv / s1    |  1 * 1 * 256 * 256 | 38 * 38 * 256   |  -             |  -               |
+| Conv_7_depthwise  | Conv dw / s2 |  3 * 3 * 256 dw    | 19 * 19 * 256   |  -             |  -               |
+| Conv_7_pointwise  | Conv / s1    |  1 * 1 * 256 * 512 | 19 * 19 * 512   |  -             |  -               |
+| Conv_8_depthwise  | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Conv_8_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
+| Conv_9_depthwise  | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Conv_9_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
+| Conv_10_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Conv_10_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
+| Conv_11_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Conv_11_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
+| Conv_12_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Conv_12_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
+
+| Blk_12_depthwise  | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Blk_12_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 10 * 10 * 512   |  -             |  -               |
+
+
+
+
+
+
+
+
+
 
 ## Number of Prior Boxes
 
