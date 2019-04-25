@@ -54,8 +54,14 @@ I used MobilenetV1 as the backbone network.
 | Conv_12_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
 | Conv_12_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
 
-| Blk_12_depthwise  | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
+| Blk_12_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 10 * 10 * 512   |  -             |  -               |
 | Blk_12_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 10 * 10 * 512   |  -             |  -               |
+| Blk_13_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 5 * 5 * 512   |  -             |  -               |
+| Blk_13_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 5 * 5 * 512   |  -             |  -               |
+| Blk_14_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 3 * 3 * 512   |  -             |  -               |
+| Blk_14_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 3 * 3 * 512   |  -             |  -               |
+| Blk_15_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 1 * 1 * 512   |  -             |  -               |
+| Blk_15_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 1 * 1 * 512   |  -             |  -               |
 
 
 
