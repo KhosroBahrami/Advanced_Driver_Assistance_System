@@ -8,7 +8,7 @@ For object detection, I used SSD object detection method followed by optimizatio
 This project has two main steps: 
 - In the first step, I fine-tunned the SSD object detection (based on mobilenet backbone network) for new 
 a dataset.
-- In the second step, I deploy the inference part based on mobilenet backbone on embedded system (Dragon board 410C) using C++ to have real-time performance. 
+- In the second step, I deploy the inference part based on mobilenet backbone on embedded system (DragonBoard 410c) using C++ to have real-time performance. 
 
 
 <p align="center">
@@ -45,7 +45,28 @@ The pipeline of our system includes the following steps:
 
 
 
-## Deployment on DragonBoard 410C
+## Deployment on DragonBoard 410c
+
+To deploy SSD object detection on the DragonBoard 410c, I did the following steps:
+- Installation of Debian linux
+- Using a 16GB MicroSD Card
+- Partition the 16GB MicroSD card into 4GB and 12GB.
+- The 4GB of SD card was used to increase the memory (DragonBoard 410c has 1GB memory).
+- The 12GB of SD card was used to increase the storage (DragonBoard 410c has 8GB storage).
+- Installation of Bazel (to compile tensorflow)
+- Installation of Tensorflow 
+- Installation of OpenCV
+- Using USB camera
+- Running the SSD object detection to get the video from camera and detects objects 
+
+
+
+
+
+
+
+
+
 
 
 
