@@ -16,7 +16,7 @@ a dataset.
 </p>
 
 
-# Training 
+# 1.Training 
 
 ## Dataset
 
@@ -54,7 +54,7 @@ For fine tunning, I used the following parameters:
 
 
 
-# Deployment on DragonBoard 410c
+# 2.Deployment on DragonBoard 410c
 To deploy SSD object detection on the DragonBoard 410c, I did/prepared the following steps:
 
 
