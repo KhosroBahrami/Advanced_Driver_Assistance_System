@@ -7,7 +7,7 @@ For object detection, I used SSD object detection method followed by optimizatio
 
 This project has two main steps: 
 In the first step, I fine tunned the SSD object detection based on mobilenet backbone network for new 
-object detection such as traffic sign and redlight.
+dataset.
 In the second step, I deploy the inference part based on mobilenet backbone on embedded system (Dragon board 410C) using C++ to have real-time performance. 
 
 
