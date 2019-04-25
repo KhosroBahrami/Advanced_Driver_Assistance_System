@@ -26,7 +26,7 @@ KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detect
 
 ## Backbone Network
 I used MobilenetV1 as the backbone network. The input to the network is an image with size of 300*300. I used the first 12 layers of the MobileNetV1 (1 convolutional layer and 11 Depth-wise Separabale Convolutional layers). Then I added 4 auxiliary layers (AuxL_13 to AuxL_16).
-For Object detection I used 2 feature maps from original layers (Conv_5_pointwise and Conv_11_pointwise) and 4 feature maps from auxiliary layers as shown in the following table.
+For object detection, I used 2 feature maps from original layers (Conv_5_pointwise and Conv_11_pointwise) and 4 feature maps from auxiliary layers as shown in the following table.
 
 
 | Layer             | Type/Stride  | Filter Size        | Feature map    |# of Parameters | # of BBoxes | 
