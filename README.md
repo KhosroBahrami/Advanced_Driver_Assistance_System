@@ -31,13 +31,7 @@ For fine tunning, I used the following parameters:
 
 
 
-## Pipeline of our system for vehicle and pedestrain detection
-The pipeline of our system includes the following steps:
 
-- Extract the images/frames from the input video 
-- Resize every image/frame into 300*300 pixels (the image size used for the SSD network)
-- Run the SSD network on the resized image/frame
-- Apply the Non-Maximum Suppression algorithm to get rid of multiple detections of a single object
 
 
 
@@ -46,7 +40,7 @@ The pipeline of our system includes the following steps:
 
 To deploy SSD object detection on the DragonBoard 410c, I did the following steps:
 
-Hardware requirements:
+### Hardware requirements:
 - Using a 16GB MicroSD Card
 - Partition the 16GB MicroSD card into 4GB and 12GB.
 - The 4GB of SD card was used to increase the memory (DragonBoard 410c has 1GB memory).
@@ -54,12 +48,20 @@ Hardware requirements:
 - Using a USB camera
 
 
-Software requirements:
+### Software requirements:
 - Installation of Debian linux
 - Installation of Bazel (to compile tensorflow)
 - Installation of Tensorflow 
 - Installation of OpenCV
 
+
+### Pipeline of our system for vehicle and pedestrain detection
+The pipeline of our system includes the following steps:
+
+- Extract the images/frames from the input video 
+- Resize every image/frame into 300*300 pixels (the image size used for the SSD network)
+- Run the SSD network on the resized image/frame
+- Apply the Non-Maximum Suppression algorithm to get rid of multiple detections of a single object
 
 - Capture the live video from camera and extract frames 
 - Transfer the frames to the SSD object detection to detect objects 
