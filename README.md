@@ -6,9 +6,9 @@ The final product is an embedded system equipped with camera that detect vehicle
 For object detection, I used SSD object detection method followed by optimization and fine tunning for detection of new objects.
 
 This project has two main steps: 
-In the first step, I fine tunned the SSD object detection based on mobilenet backbone network for new 
-dataset.
-In the second step, I deploy the inference part based on mobilenet backbone on embedded system (Dragon board 410C) using C++ to have real-time performance. 
+- In the first step, I fine-tunned the SSD object detection (based on mobilenet backbone network) for new 
+a dataset.
+- In the second step, I deploy the inference part based on mobilenet backbone on embedded system (Dragon board 410C) using C++ to have real-time performance. 
 
 
 <p align="center">
@@ -32,10 +32,9 @@ For fine tunning, I used the following parameters:
 - learning rate = 0.001
 
 
-## Inference
 
 
-## Pipeline of our system
+## Pipeline of our system for vehicle and pedestrain detection
 The pipeline of our system includes the following steps:
 
 - Extract the images/frames from the input video 
