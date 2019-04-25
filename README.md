@@ -28,7 +28,7 @@ KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detect
 I used MobilenetV1 as the backbone network. 
 
 
-| Layer             | Type/Stride  | Filter Size        | Feature map    |# of Parameters | # of Bounding boxes | 
+| Layer             | Type/Stride  | Filter Size        | Feature map    |# of Parameters | # of BBoxes | 
 | :---:             | :---:        |  :---:             |  :---:          | :---:          | :---:            | 
 | Conv_1            | Conv / s2    |  3 * 3 * 3 * 32    | 150 * 150 * 32  |  -             |  -               |
 | Conv_2_depthwise  | Conv dw / s1 |  3 * 3 * 32 dw     | 150 * 150 * 64  |  -             |  -               |
