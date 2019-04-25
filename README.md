@@ -57,7 +57,8 @@ To deploy SSD object detection on the DragonBoard 410c, I did the following step
 - Installation of Tensorflow 
 - Installation of OpenCV
 - Using USB camera
-- Running the SSD object detection to get the video from camera and detects objects 
+- Capture the live video from camera and extract frames 
+- Transfer the frames to the SSD object detection to detect objects 
 
 
 
