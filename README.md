@@ -25,16 +25,7 @@ In order to specialize the SSD network for vehicle and pedestrian detection, I f
 KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detector already contains vehicles and pedestrians. However, I fine-tuned the SSD for vehicale and pedestrian detection. For KITTI, I divided the original training set of 7500 images into 6000 training and 1500 validation samples.
 
 ## Backbone Network
-I used MobilenetV1 as the backbone network. The input to the network is an image with size of 300*300. The output of the network is 6 features map with 8732 bounding box calculated as follows:  
-
-- Conv_5_pointwise: 38×38×4 = 5776 boxes (4 boxes for each location)
-- Conv_11_pointwise: 19×19×6 = 2166 boxes (6 boxes for each location)
-- AuxL_12_pointwise: 10×10×6 = 600 boxes (6 boxes for each location)
-- AuxL_13_pointwise: 5×5×6 = 150 boxes (6 boxes for each location)
-- AuxL_14_pointwise: 3×3×4 = 36 boxes (4 boxes for each location)
-- AuxL_15_pointwise: 1×1×4 = 4 boxes (4 boxes for each location)
-
-If we sum them up, we got 5776 + 2166 + 600 + 150 + 36 +4 = 8732 boxes in total for SSD with MobileNetv1.
+I used MobilenetV1 as the backbone network. The input to the network is an image with size of 300*300. 
 
 
 | Layer             | Type/Stride  | Filter Size        | Feature map    |# of Parameters | # of BBoxes | 
@@ -75,12 +66,18 @@ If we sum them up, we got 5776 + 2166 + 600 + 150 + 36 +4 = 8732 boxes in total 
 
 
 
-
-
-
-
-
 ## Number of Prior Boxes
+The output of the network is 6 features map with 8732 bounding box calculated as follows:  
+
+- Conv_5_pointwise: 38×38×4 = 5776 boxes (4 boxes for each location)
+- Conv_11_pointwise: 19×19×6 = 2166 boxes (6 boxes for each location)
+- AuxL_12_pointwise: 10×10×6 = 600 boxes (6 boxes for each location)
+- AuxL_13_pointwise: 5×5×6 = 150 boxes (6 boxes for each location)
+- AuxL_14_pointwise: 3×3×4 = 36 boxes (4 boxes for each location)
+- AuxL_15_pointwise: 1×1×4 = 4 boxes (4 boxes for each location)
+
+If we sum them up, we got 5776 + 2166 + 600 + 150 + 36 +4 = 8732 boxes in total for SSD with MobileNetv1.
+
 
 
 ## MultiBox Detection
