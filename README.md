@@ -16,13 +16,36 @@ a dataset.
 </p>
 
 
+# Training 
 
-
-## Training
+## Dataset
 
 In order to specialize the SSD network for vehicle and pedestrian detection, I fine-tuned the original network weights using the following dataset.
 
 KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detector already contains vehicles and pedestrians. However, I fine-tuned the SSD for vehicale and pedestrian detection. For KITTI, I divided the original training set of 7500 images into 6000 training and 1500 validation samples.
+
+
+## Number of Prior Boxes
+
+
+## MultiBox Detection
+
+
+## Hard Negative Mining (HNM)
+
+
+
+## Image Augmentation
+
+
+## Loss function
+
+
+## Non Maxmimum Supression (NMS)
+
+
+
+## Fine-tuning
 
 For fine tunning, I used the following parameters:
 - batch size = 32 
@@ -31,12 +54,7 @@ For fine tunning, I used the following parameters:
 
 
 
-
-
-
-
-
-## Deployment on DragonBoard 410c
+# Deployment on DragonBoard 410c
 To deploy SSD object detection on the DragonBoard 410c, I did/prepared the following steps:
 
 
