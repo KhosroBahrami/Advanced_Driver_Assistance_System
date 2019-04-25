@@ -32,11 +32,16 @@ batch size = 32
 learning rate = 0.001
 
 
-
-
-
 ## Inference
 
+
+## Pipeline of our system
+The pipeline of our system includes the following steps:
+
+- Extract the images/frames from the input video 
+- Resize every image/frame into 300*300 pixels (the image size used for the SSD network)
+- Run the SSD network on the resized image/frame
+- Apply the Non-Maximum Suppression algorithm to get rid of multiple detections of a single object
 
 
 
