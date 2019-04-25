@@ -28,8 +28,8 @@ KITTI dataset: the Pascal VOC dataset that has been used to train the SSD detect
 
 
 For fine tunning, I used the following parameters:
-batch size = 32 
-learning rate = 0.001
+- batch size = 32 
+- learning rate = 0.001
 
 
 ## Inference
