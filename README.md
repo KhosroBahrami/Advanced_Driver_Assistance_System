@@ -38,7 +38,7 @@ I used MobilenetV1 as the backbone network.
 | Conv_4_depthwise  | Conv dw / s1 |  3 * 3 * 128 dw    | 75 * 75 * 128   |  -             |  -               |
 | Conv_4_pointwise  | Conv / s1    |  1 * 1 * 128 * 128 | 75 * 75 * 128   |  -             |  -               |
 | Conv_5_depthwise  | Conv dw / s2 |  3 * 3 * 128 dw    | 38 * 38 * 128   |  -             |  -               |
-| Conv_5_pointwise  | Conv / s1    |  1 * 1 * 128 * 256 | 38 * 38 * 256   |  -             |  38*38*4              |
+| Conv_5_pointwise  | Conv / s1    |  1 * 1 * 128 * 256 | 38 * 38 * 256   |  -             |  38 * 38 * 4     |
 | Conv_6_depthwise  | Conv dw / s1 |  3 * 3 * 256 dw    | 38 * 38 * 256   |  -             |  -               |
 | Conv_6_pointwise  | Conv / s1    |  1 * 1 * 256 * 256 | 38 * 38 * 256   |  -             |  -               |
 | Conv_7_depthwise  | Conv dw / s2 |  3 * 3 * 256 dw    | 19 * 19 * 256   |  -             |  -               |
@@ -50,17 +50,17 @@ I used MobilenetV1 as the backbone network.
 | Conv_10_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
 | Conv_10_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
 | Conv_11_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
-| Conv_11_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  ..               |
+| Conv_11_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  19 * 19 *6      |
 | Conv_12_depthwise | Conv dw / s1 |  3 * 3 * 512 dw    | 19 * 19 * 512   |  -             |  -               |
 | Conv_12_pointwise | Conv / s1    |  1 * 1 * 512 * 512 | 19 * 19 * 512   |  -             |  -               |
-| AuxL_12_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 10 * 10 * 512   |  -             |  -               |
-| AuxL_12_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 10 * 10 * 512   |  -             |  ..              |
-| AuxL_13_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 5 * 5 * 512     |  -             |  -               |
-| AuxL_13_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 5 * 5 * 512     |  -             |  ..               |
-| AuxL_14_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 3 * 3 * 512     |  -             |  -               |
-| AuxL_14_pointwise  | Conv / s1    |  1 * 1 * 512 * 1024 | 3 * 3 * 1024   |  -             |  ..               |
-| AuxL_15_depthwise  | Conv dw / s2 |  3 * 3 * 1024 dw    | 1 * 1 * 1024   |  -             |  -               |
-| AuxL_15_pointwise  | Conv / s1    |  1 * 1 * 1024 * 1024 | 1 * 1 * 1024  |  -             |  ..               |
+| AuxL_12_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 10 * 10 * 512   |  -             |  -              |
+| AuxL_12_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 10 * 10 * 512   |  -             |  10 * 10 * 6    |
+| AuxL_13_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 5 * 5 * 512     |  -             |  -              |
+| AuxL_13_pointwise  | Conv / s1    |  1 * 1 * 512 * 512 | 5 * 5 * 512     |  -             |  5 * 5 * 6      |
+| AuxL_14_depthwise  | Conv dw / s2 |  3 * 3 * 512 dw    | 3 * 3 * 512     |  -             |  -              |
+| AuxL_14_pointwise  | Conv / s1    |  1 * 1 * 512 * 1024 | 3 * 3 * 1024   |  -             |  3 * 3 * 4      |
+| AuxL_15_depthwise  | Conv dw / s2 |  3 * 3 * 1024 dw    | 1 * 1 * 1024   |  -             |  -              |
+| AuxL_15_pointwise  | Conv / s1    |  1 * 1 * 1024 * 1024 | 1 * 1 * 1024  |  -             |  1 * 1 * 4      |
 
 
 
