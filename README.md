@@ -102,7 +102,7 @@ To handle variants in various object sizes and shapes, each training image is ra
 The loss function is the combination of localization loss (regression loss) and confidence loss (classification loss):
 loss = 1/N *(confidence_loss + α * localization_loss)
 
-where N is the number of positive match and α is the weight for the localization loss.
+where N is the number of positive match and α=1 is the weight for the localization loss.
 
 
 ## Non Maxmimum Supression (NMS)
