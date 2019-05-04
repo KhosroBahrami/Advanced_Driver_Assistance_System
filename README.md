@@ -82,6 +82,8 @@ If we sum them up, we got 5776 + 2166 + 600 + 150 + 36 +4 = 8732 boxes in total 
 
 
 ## MultiBox Detection
+For prediction, we used multiple predictions containing boundary boxes and confidence scores from 6 prediction maps of resolutions 38x38, 19x19, 10x10, 5x5, 3x3, and 1x1.   
+
 
 
 ## Hard Negative Mining (HNM)
