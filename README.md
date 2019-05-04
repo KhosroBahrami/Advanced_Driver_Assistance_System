@@ -85,19 +85,28 @@ If we sum them up, we got 5776 + 2166 + 600 + 150 + 36 +4 = 8732 boxes in total 
 For prediction, we used multiple predictions containing boundary boxes and confidence scores from 6 prediction maps of resolutions 38x38, 19x19, 10x10, 5x5, 3x3, and 1x1.   
 
 
-
 ## Hard Negative Mining (HNM)
-
+To address the problem of imbalance dataset, all background samples are sorted by their predicted background scores (confidence loss) in the ascending order. Only the top K samples (with the top loss) are kept for proceeding to the computation of the loss. K is computed for each batch to to make sure ratio between foreground samples and background samples is at most 1:3. This leads to a faster and more stable training.
 
 
 ## Image Augmentation
+To handle variants in various object sizes and shapes, each training image is randomly sampled by one of the followings:
+
+- Use the original.
+- Sample a patch with IoU of 0.1, 0.3, 0.5, 0.7 or 0.9.
+- Randomly sample a patch. The sampled patch will have an aspect ratio between 1/2 and 2. Then it is resized to a fixed size and we flip one-half of the training data. 
+- Color distortions.
 
 
 ## Loss function
+The loss function is the combination of localization loss (regression loss) and confidence loss (classification loss):
+loss = 1/N *(confidence_loss + α * localization_loss)
+
+where N is the number of positive match and α is the weight for the localization loss.
 
 
 ## Non Maxmimum Supression (NMS)
-
+In NMS, the boxes with a confidence loss threshold less than ct=0.01 and IoU less than lt=0.5 are discarded, and only the top N=200 predictions are kept. This ensures only the most likely predictions are retained by the network, while the more noisier ones are removed.
 
 
 ## Fine-tuning
