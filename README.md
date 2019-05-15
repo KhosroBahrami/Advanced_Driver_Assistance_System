@@ -126,7 +126,7 @@ To deploy SSD object detection on the DragonBoard 410c, I did/prepared the follo
 - Using a DragonBoard 410c, USB camera, keyboard, mouse, HDMI monitor.
 - Using a 16GB MicroSD Card
 - Partition the 16GB MicroSD card into 4GB and 12GB.
-- The 4GB of SD card was used to increase the memory (DragonBoard 410c has 1GB memory).
+- The 4GB of SD card was used as swap memory to increase the memory (DragonBoard 410c has 1GB memory).
 - The 12GB of SD card was used to increase the storage (DragonBoard 410c has 8GB storage).
 
 
