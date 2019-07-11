@@ -3,7 +3,7 @@
 The goal of this project is deployment of sub-systems of Advanced Driver Assistance System (ADAS) including vehicle and pedestrian detection. 
 
 The final product is an embedded system equipped with camera to detect vehicle and pedestrian in real-time. 
-For object detection, I used SSD object detection method followed by optimization and fine tunning for detection of new objects.
+For object detection, I used SSD object detection method, optimizated and fine-tunned for detection of new objects.
 
 This project has two main steps: 
 - In the first step, I fine-tunned the SSD object detection (based on mobilenet backbone network) for a new dataset.
